@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>Mahima.exe 🤍</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      user-select: none;
+    }
+    body {
+      min-height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top, #ffe4e9 0%, #ffc2d4 100%);
+      color: #fff;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .section {
+      display: none;
+      width: 90%;
+      max-width: 420px;
+      padding: 32px 24px;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+    .active {
+      display: block;
+      animation: popIn 0.7s ease-out;
+    }
+    h1 {
+      font-size: 2.1rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+    h2 {
+      font-size: 1.65rem;
+      font-weight: 600;
+      margin: 20px 0 12px;
+    }
+    p {
+      font-size: 1.08rem;
+      line-height: 1.55;
+      margin: 12px 0;
+    }
+    .subtle {
+      font-size: 0.95rem;
+      opacity: 0.82;
+      margin: 8px 0;
+    }
+    .highlight {
+      color: #fff;
+      font-weight: 600;
+      background: rgba(255, 79, 129, 0.22);
+      padding: 2px 10px;
+      border-radius: 12px;
+    }
+    button {
+      width: 100%;
+      padding: 16px;
+      margin: 16px 0 8px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #ffffff, #ffe0e9);
+      color: #ff4f81;
+      box-shadow: 0 8px 20px rgba(255,79,129,0.25);
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+    button:active {
+      transform: scale(0.96);
+      box-shadow: 0 4px 12px rgba(255,79,129,0.3);
+    }
+    #runBtn {
+      position: absolute;
+      width: 76%;
+      left: 12%;
+      top: 60%;
+      background: linear-gradient(135deg, #ffe0e9, #ffd1dc);
+    }
+    .heart-bg {
+      position: absolute;
+      font-size: 28px;
+      pointer-events: none;
+      opacity: 0.7;
+      animation: floatHeart 12s linear infinite;
+    }
+    @keyframes popIn {
+      0% { opacity: 0; transform: scale(0.88) translateY(20px); }
+      100% { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    @keyframes floatHeart {
+      0% { transform: translateY(-10vh) rotate(0deg); opacity: 0.7; }
+      100% { transform: translateY(110vh) rotate(20deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PAGE 1 -->
+  <div class="section active" id="p1">
+    <h1>Hiii chotuuuu 🤍</h1>
+    <p class="subtle">Warning: this contains efforts and pyaari pyaari feelings and timeeee </p>
+    <p>I spent actual time on this instead of… you know… other things 😏</p>
+    <button onclick="next(2)">I’m already judging you</button>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div class="section" id="p2">
+    <h1>Before we go further</h1>
+    <p>You have to promise:</p>
+    <p>You won’t say <span class="highlight">Pitega tu mujhse</span><br>when I something gooddd</p>
+    <button onclick="alert('Suspect behavior detected 😏'); next(3)">Okay fine, I promise</button>
+  </div>
+
+  <!-- PAGE 3 -->
+  <div class="section" id="p3">
+    <h1>Recent crimes I’ve committed</h1>
+    <p>• Falling stupidly hard for you aur vo bhi bhout unexpectedly</p>
+    <p>• Thinking about you the entire day</p>
+    <p>• Making this page instead of teleporting to you and asking you</p>
+    <p><b>Regret level:</b> 0%</p>
+    <button onclick="next(4)">Mera pyaaraa bachuuuu</button>
+  </div>
+
+  <!-- PAGE 4 -->
+  <div class="section" id="p4">
+    <h1>Quick vibe check 😏</h1>
+    <p>If I keep saying “no” to ykw… </p>
+    <p>What’s your official reaction?</p>
+    <button onclick="alert('Classic Mahima response 😭'); next(5)">Bhout maarungi + rape kerdungi</button>
+    <button onclick="next(5)">I’ll just seduce you harder</button>
+  </div>
+
+  <!-- PAGE 5 – The Proposal -->
+  <div class="section" id="p5">
+    <h1>Okay serious now</h1>
+    <p class="subtle">(don’t laugh)</p>
+    <h2>Will you be my Valentine, babygirl? 🤍</h2>
+    <button onclick="yesPressed()">Yes, obviously(Ab koi option hai nahi tbh) 🥹</button>
+    <button id="runBtn">Let me think…</button>
+  </div>
+
+  <!-- CUTE ENDING -->
+  <div class="section" id="cuteEnd">
+    <h1>Waitttt ahhhhh you said yes? 🥹🤍</h1>
+    <p>You just made me the happiest idiot alive hehhehehe mezeee he aageyeee</p>
+    <p>And now you’re officially stuck with me or maybe i should say i am stuck with you now 😉</p>
+    <p class="subtle">(good luck escaping)</p>
+    <h2>HAPPYYY VALLENTINESSS DAYYY MERIII JAANNNN 🤍</h2>
+    <p>IIII LLOOVVEEEEE YYOOUUUUU BHHOUUTTT ZAYYDAAAA… and maybe someday I’ll stop being so shy 😏</p>
+  </div>
+
+  <!-- SAVAGE / TEASING ENDING -->
+  <div class="section" id="savageEnd">
+    <h1>Gotcha 😈</h1>
+    <p>You clicked YES</p>
+    <p>No take-backs</p>
+    <p class="subtle">Contract signed. Body and soul belong to me now.</p>
+    <h2>Welcome to forever, chotu 🤍</h2>
+    <p>Also… you still owe me for all those times you said no 😏</p>
+  </div>
+
+  <script>
+    function next(n) {
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+      document.getElementById('p' + n)?.classList.add('active') ||
+      document.getElementById(n)?.classList.add('active');
+    }
+
+    const runBtn = document.getElementById('runBtn');
+
+    function dodge() {
+      if (navigator.vibrate) navigator.vibrate([8, 20, 8]);
+      const maxX = window.innerWidth - runBtn.offsetWidth - 40;
+      const maxY = window.innerHeight - runBtn.offsetHeight - 100;
+      runBtn.style.left = Math.random() * maxX + 'px';
+      runBtn.style.top = Math.random() * maxY + 'px';
+    }
+
+    runBtn.addEventListener('mouseover', dodge);
+    runBtn.addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      dodge();
+    });
+
+    function yesPressed() {
+      if (navigator.vibrate) navigator.vibrate([30, 60, 30]);
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+      const ending = Math.random() > 0.5 ? 'cuteEnd' : 'savageEnd';
+      document.getElementById(ending).classList.add('active');
+      launchHearts();
+    }
+
+    function launchHearts() {
+      for (let i = 0; i < 30; i++) {
+        setTimeout(() => {
+          const h = document.createElement('div');
+          h.className = 'heart-bg';
+          h.innerText = ['🤍','💗','💕','💖'][Math.floor(Math.random()*4)];
+          h.style.left = Math.random() * 100 + 'vw';
+          h.style.animationDuration = (Math.random() * 5 + 7) + 's';
+          h.style.animationDelay = Math.random() * 1 + 's';
+          document.body.appendChild(h);
+          setTimeout(() => h.remove(), 12000);
+        }, i * 120);
+      }
+    }
+
+    // Gentle background hearts from start
+    function createBgHeart() {
+      const h = document.createElement('div');
+      h.className = 'heart-bg';
+      h.innerText = '🤍';
+      h.style.left = Math.random() * 100 + 'vw';
+      h.style.fontSize = (Math.random() * 18 + 14) + 'px';
+      h.style.animationDuration = (Math.random() * 10 + 14) + 's';
+      h.style.opacity = Math.random() * 0.4 + 0.3;
+      document.body.appendChild(h);
+      setTimeout(() => h.remove(), 18000);
+    }
+
+    setInterval(createBgHeart, 2200);
+  </script>
+</body>
+</html>
